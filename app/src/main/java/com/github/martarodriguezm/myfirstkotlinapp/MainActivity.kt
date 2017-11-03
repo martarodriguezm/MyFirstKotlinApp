@@ -13,13 +13,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = findViewById(R.id.textView) as TextView
+        val textView = findViewById<TextView>(R.id.textView) as TextView
         textView.text = "Hello Kotlin!"
 
         toast("Hello ${textView.text}, how are you?")
 
-        val editText = findViewById(R.id.message) as EditText
-        val button = findViewById(R.id.button) as Button
+        val editText = findViewById<EditText>(R.id.message) as EditText
+        val button = findViewById<Button>(R.id.button) as Button
         button.setOnClickListener {
             toast("Hello ${editText.text}!")
         }
